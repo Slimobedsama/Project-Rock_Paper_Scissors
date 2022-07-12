@@ -3,6 +3,7 @@ function computerPlay() {
     let gameWords = ['Rock', 'Paper', 'Scissors'];
     // Randomly selects from the options of words
     let words = gameWords[Math.floor(Math.random() * gameWords.length)];
-    console.log(words);
+    return words;
 }
-computerPlay();
+console.log(computerPlay());
+
