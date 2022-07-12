@@ -7,7 +7,7 @@ function computerPlay() {
 }
 // console.log(computerPlay());
 
-function playRound(playerSelection, computerSelection) {
+function playRound() {
     // Checks to see if both players have the same pick
     if(playerSelection === computerSelection) {
         return 'It\'s a draw'
@@ -17,24 +17,24 @@ function playRound(playerSelection, computerSelection) {
         if(playerSelection === 'ROCK') {
         // Congratulates player's selection if rock
             return 'Player Wins! Rock beats Scissors'
-        } else if(computerSelection === 'ROCK') {
+        } else {
             return 'You Lose! Rock beats Scissors'
         }
     } else if (playerSelection === 'PAPER' && computerSelection === 'ROCK' || computerSelection === 'PAPER' && playerSelection === 'ROCK') {
         if(playerSelection === 'PAPER') {
             return 'Player Wins! Paper beats Rock'
-        } else if(computerSelection === 'PAPER') {
+        } else {
             return 'You Lose! Paper beats Rock'
         }
     } else if (playerSelection === 'SCISSORS' && computerSelection === 'PAPER' || computerSelection === 'SCISSORS' && playerSelection === 'PAPER') {
         if(playerSelection === 'SCISSORS') {
             return 'Player Wins! Scissors beats Paper'
-        } else if(computerSelection === 'PAPER') {
+        } else {
             return 'You Lose! Scissors beats Paper'
         }
     }
 }
 
-let playerSelection = 'Scissors'.toUpperCase();
+let playerSelection = prompt('Choose Between Rock, Paper Or Scissors').toUpperCase();
 let computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection))
+console.log(playRound())
