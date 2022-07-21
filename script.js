@@ -8,6 +8,10 @@ function computerPlay() {
 // console.log(computerPlay());
 
 function playRound() {
+    // Variable for player's selection
+    let playerSelection = prompt('Choose Between Rock, Paper Or Scissors').toUpperCase();
+    // Variable for computer's rsndomly selection
+    let computerSelection = computerPlay();
     // Checks to see if both players have the same pick
     if(playerSelection === computerSelection) {
         return 'It\'s a draw'
@@ -15,9 +19,10 @@ function playRound() {
     } else if(playerSelection === 'ROCK' && computerSelection === 'SCISSORS' || computerSelection === 'ROCK' && playerSelection === 'SCISSORS') {
         // Checks if player's selection is rock or scissor
         if(playerSelection === 'ROCK') {
-        // Congratulates player's selection if rock
+        // Congratulates player if rock
             return 'Player Wins! Rock beats Scissors'
         } else {
+        // Congratulates computer if rock
             return 'You Lose! Rock beats Scissors'
         }
     } else if (playerSelection === 'PAPER' && computerSelection === 'ROCK' || computerSelection === 'PAPER' && playerSelection === 'ROCK') {
@@ -34,7 +39,12 @@ function playRound() {
         }
     }
 }
+// console.log(playRound())
 
-let playerSelection = prompt('Choose Between Rock, Paper Or Scissors').toUpperCase();
-let computerSelection = computerPlay();
-console.log(playRound())
+function game() {
+    for(let i = 1; i <= 5; i++) {
+       console.log(playRound());
+    }
+}
+
+game()
