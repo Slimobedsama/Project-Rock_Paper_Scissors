@@ -65,7 +65,7 @@ function game() {
     for(let i = 1; i <= 5; i++) {
        console.log(playRound());
     }
-    console.log(finalWinner());
+    alert(finalWinner());
 };
 
 game()
