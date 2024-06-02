@@ -68,4 +68,4 @@ function game() {
     alert(finalWinner());
 };
 
-// game()
+game()
