@@ -7,3 +7,21 @@ body, h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     padding: 0;
 }
+h1, .com h2 {
+    text-align: center;
+    text-decoration: underline;
+}
+.com h2 {
+    margin: 30px 0;
+}
+.com-img {
+    display: flex;
+    justify-content: space-around;
+    
+}
+.com-pics {
+    margin: 0 10px;
+}
+.com-pics img {
+    width: 100%;
+}
