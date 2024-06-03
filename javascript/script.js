@@ -1,5 +1,18 @@
-let playerScore = 0;
-let computerScore = 0;
+// DOM SELECTION
+const comRock = document.querySelector('[alt="rock"]');
+const comPaper = document.querySelector('[alt="paper"]');
+const comScissors = document.querySelector('[alt="scissors"]');
+const computerScore = document.querySelector('#com-score');
+const computerOutcome = document.querySelector('#com-outcome');
+const playRock = document.querySelector('[alt="my-rock"]');
+const playPaper = document.querySelector('[alt="my-paper"]');
+const playScissors = document.querySelector('[alt="my-scissors"]');
+const playerScore = document.querySelector('#player-score');
+const playerOutcome = document.querySelector('#player-outcome');
+const finalOutcome = document.querySelector('#final');
+// SCORES
+playerScore.textContent = 'Player Score: ' + +0;
+computerScore.textContent = 'Computer Score: ' + +0;
 function computerPlay() {
     // Make a variable to hold for rock, papper and scissor
     let gameWords = ['Rock', 'Paper', 'Scissors'];
