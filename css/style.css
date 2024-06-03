@@ -7,11 +7,11 @@ body, h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     padding: 0;
 }
-h1, .com h2 {
+h1, .com h2, .player h2 {
     text-align: center;
     text-decoration: underline;
 }
-.com h2, .com-pics, #final-winner {
+.com h2, .com-pics, #final-winner, .player h2, .player-pics {
     margin: 20px 0;
 }
 .com-img {
@@ -25,9 +25,20 @@ h1, .com h2 {
 .com-score {
     display: flex;
     justify-content: space-evenly;
-    margin: 20px 0;
 }
 #final-winner {
     display: flex;
     justify-content: center;
+}
+.player-img {
+    display: flex;
+    justify-content: space-around;
+    
+}
+.player-pics img {
+    width: 100%;
+}
+.player-score {
+    display: flex;
+    justify-content: space-evenly;
 }
