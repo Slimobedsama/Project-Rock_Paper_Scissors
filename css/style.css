@@ -25,3 +25,8 @@ h1, .com h2 {
 .com-pics img {
     width: 100%;
 }
+.com-score {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 0;
+}
