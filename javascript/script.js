@@ -15,10 +15,10 @@ playerScore.textContent = 'Player Score: ' + +0;
 computerScore.textContent = 'Computer Score: ' + +0;
 function computerPlay() {
     // Make a variable to hold for rock, papper and scissor
-    let gameWords = ['Rock', 'Paper', 'Scissors'];
+    let gameWords = [comRock, comPaper, comScissors];
     // Randomly selects from the options of words
     let words = gameWords[Math.floor(Math.random() * gameWords.length)];
-    return words.toUpperCase();
+    return words;
 }
 
 function playRound() {
