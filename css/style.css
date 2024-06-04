@@ -11,15 +11,15 @@ h1, .com h2, .player h2 {
     text-align: center;
     text-decoration: underline;
 }
-.com h2, .com-pics, #final-winner, .player h2, .player-pics {
+.com h2, .pics, #final-winner, .player h2 {
     margin: 20px 0;
 }
-.com-img {
+.images {
     display: flex;
     justify-content: space-around;
     
 }
-.com-pics img {
+.pics img {
     width: 100%;
 }
 .com-score {
@@ -30,15 +30,19 @@ h1, .com h2, .player h2 {
     display: flex;
     justify-content: center;
 }
-.player-img {
-    display: flex;
-    justify-content: space-around;
-    
-}
-.player-pics img {
-    width: 100%;
-}
 .player-score {
     display: flex;
     justify-content: space-evenly;
+}
+.centre {
+    text-align: center;
+}
+.centre input {
+    background-color: #fff;
+    color: #000;
+    font-weight: 700;
+    padding: 5px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
 }
