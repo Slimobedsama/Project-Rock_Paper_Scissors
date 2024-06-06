@@ -1,21 +1,21 @@
 // DOM SELECTION
-const computerScore = document.querySelector('#com-score');
-const computerOutcome = document.querySelector('#com-outcome');
-const playRock = document.querySelector('[value="ROCK"]');
-const playPaper = document.querySelector('[value="PAPER"]');
-const playScissors = document.querySelector('[value="SCISSORS"]');
-const playerScore = document.querySelector('#player-score');
-const playerOutcome = document.querySelector('#player-outcome');
-const finalOutcome = document.querySelector('#final');
+let computerScore = document.querySelector('#com-score');
+let computerOutcome = document.querySelector('#com-outcome');
+let playRock = document.querySelector('[value="ROCK"]');
+let playPaper = document.querySelector('[value="PAPER"]');
+let playScissors = document.querySelector('[value="SCISSORS"]');
+let playerScore = document.querySelector('#player-score');
+let playerOutcome = document.querySelector('#player-outcome');
+let finalOutcome = document.querySelector('#final');
 // SCORES
 playerScore.textContent = 'Player Score: ' + +0;
 computerScore.textContent = 'Computer Score: ' + +0;
 function computerPlay() {
     // Make a variable to hold for rock, papper and scissor
-    let gameWords = [comRock, comPaper, comScissors];
+    let gameWords = ['rock', 'paper', 'scissors'];
     // Randomly selects from the options of words
     let words = gameWords[Math.floor(Math.random() * gameWords.length)];
-    return words;
+    return words.toUpperCase();
 }
 
 function playRound() {
@@ -79,3 +79,15 @@ function game() {
 };
 
 // game()
+// EVENT LISTENERS
+playRock.addEventListener('click', ()=> {
+    playRound();
+});
+
+playPaper.addEventListener('click', ()=> {
+    playRound();
+});
+
+playScissors.addEventListener('click', ()=> {
+    playRound();
+});
