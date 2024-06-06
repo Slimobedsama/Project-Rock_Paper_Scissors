@@ -12,7 +12,7 @@ h1, .com h2, .player h2 {
     text-decoration: underline;
 }
 .com h2, .pics, #final-winner, .player h2 {
-    margin: 20px 0;
+    margin: 20px 10px;
 }
 .images {
     display: flex;
