@@ -1,12 +1,9 @@
 // DOM SELECTION
-const comRock = document.querySelector('[alt="rock"]');
-const comPaper = document.querySelector('[alt="paper"]');
-const comScissors = document.querySelector('[alt="scissors"]');
 const computerScore = document.querySelector('#com-score');
 const computerOutcome = document.querySelector('#com-outcome');
-const playRock = document.querySelector('[alt="my-rock"]');
-const playPaper = document.querySelector('[alt="my-paper"]');
-const playScissors = document.querySelector('[alt="my-scissors"]');
+const playRock = document.querySelector('[value="ROCK"]');
+const playPaper = document.querySelector('[value="PAPER"]');
+const playScissors = document.querySelector('[value="SCISSORS"]');
 const playerScore = document.querySelector('#player-score');
 const playerOutcome = document.querySelector('#player-outcome');
 const finalOutcome = document.querySelector('#final');
