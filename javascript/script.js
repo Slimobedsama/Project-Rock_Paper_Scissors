@@ -27,7 +27,7 @@ function playRound() {
     if(playerSelection === computerSelection) {
         return 'It\'s a draw'
     // Checks for both players selection for rock or scissors
-    } else if('ROCK' && 'SCISSORS') {
+    } else if(playerSelection === 'ROCK' && computerSelection === 'SCISSORS' || playerSelection === 'SCISSORS' && computerSelection === 'ROCK') {
         // Checks if player's selection is rock or scissor
         if(playerSelection === 'ROCK') {
         // Congratulates player if rock
@@ -39,7 +39,7 @@ function playRound() {
             return 'You Lose! Rock beats Scissors'
         }
     // Checks player selection and computer selection for paper or rock
-    } else if ('PAPER' && 'ROCK') {
+    } else if (playerSelection === 'PAPER' && computerSelection === 'ROCK' || playerSelection === 'ROCK' && computerSelection === 'PAPER') {
         // Checks if player's selection is paper
         if(playerSelection === 'PAPER') {
         // Congratulates player if paper
@@ -50,7 +50,7 @@ function playRound() {
             computerScore+= 1;
             return 'You Lose! Paper beats Rock'
         }
-    } else if ('SCISSORS' && 'PAPER') {
+    } else if (playerSelection === 'SCISSORS' && computerSelection === 'PAPER' || playerSelection === 'PAPER' && computerSelection === 'SCISSORS') {
         if(playerSelection === 'SCISSORS') {
             playerScore+= 1;
             return 'Player Wins! Scissors beats Paper'
