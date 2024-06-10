@@ -10,6 +10,9 @@ let finalOutcome = document.querySelector('#final');
 // SCORES
 playerScore.textContent = 'Player Score: ' + +0;
 computerScore.textContent = 'Computer Score: ' + +0;
+// PLAYER CHOICE
+let choice;
+// COMPUTER RANDOM CHOICE
 function computerPlay() {
     // Make a variable to hold for rock, papper and scissor
     let gameWords = ['rock', 'paper', 'scissors'];
@@ -20,23 +23,24 @@ function computerPlay() {
 
 function playRound() {
     // Variable for player's selection
-    let playerSelection = prompt('Choose Between Rock, Paper Or Scissors').toUpperCase();
+    let playerSelection = choice;
     // Variable for computer's rsndomly selection
     let computerSelection = computerPlay();
     // Checks to see if both players have the same pick
     if(playerSelection === computerSelection) {
-        return 'It\'s a draw'
+        playerOutcome.textContent = 'It\'s a draw';
+        computerOutcome.textContent = 'It\'s a draw';
     // Checks for both players selection for rock or scissors
     } else if(playerSelection === 'ROCK' && computerSelection === 'SCISSORS' || playerSelection === 'SCISSORS' && computerSelection === 'ROCK') {
         // Checks if player's selection is rock or scissor
         if(playerSelection === 'ROCK') {
         // Congratulates player if rock
             playerScore+= 1;
-            return 'Player Wins! Rock beats Scissors'
+            playerOutcome.textContent = 'Player Wins! Rock beats Scissors';
         } else {
         // Congratulates computer if rock
             computerScore+= 1;
-            return 'You Lose! Rock beats Scissors'
+            computerOutcome.textContent = 'You Lose! Rock beats Scissors';
         }
     // Checks player selection and computer selection for paper or rock
     } else if (playerSelection === 'PAPER' && computerSelection === 'ROCK' || playerSelection === 'ROCK' && computerSelection === 'PAPER') {
@@ -44,19 +48,19 @@ function playRound() {
         if(playerSelection === 'PAPER') {
         // Congratulates player if paper
             playerScore+= 1;
-            return 'Player Wins! Paper beats Rock'
+            playerOutcome.textContent = 'Player Wins! Paper beats Rock';
         } else {
         // Congratulates  computer if paper
             computerScore+= 1;
-            return 'You Lose! Paper beats Rock'
+            computerOutcome.textContent = 'You Lose! Paper beats Rock';
         }
     } else if (playerSelection === 'SCISSORS' && computerSelection === 'PAPER' || playerSelection === 'PAPER' && computerSelection === 'SCISSORS') {
         if(playerSelection === 'SCISSORS') {
             playerScore+= 1;
-            return 'Player Wins! Scissors beats Paper'
+            playerOutcome.textContent = 'Player Wins! Scissors beats Paper';
         } else {
             computerScore+= 1;
-            return 'You Lose! Scissors beats Paper'
+            computerOutcome.textContent = 'You Lose! Scissors beats Paper';
         }
     }
 };
@@ -81,13 +85,16 @@ function game() {
 // game()
 // EVENT LISTENERS
 playRock.addEventListener('click', ()=> {
+    choice = playRock.value;
     playRound();
 });
 
 playPaper.addEventListener('click', ()=> {
+    choice = playPaper.value;
     playRound();
 });
 
 playScissors.addEventListener('click', ()=> {
+    choice = playScissors.value;
     playRound();
 });
