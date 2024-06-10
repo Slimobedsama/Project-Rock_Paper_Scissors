@@ -22,6 +22,9 @@ function computerPlay() {
 }
 
 function playRound() {
+    // CLEAR THE OUTPUT AFTER EACH ROUND
+    playerOutcome.textContent = '';
+    computerOutcome.textContent = '';
     // Variable for player's selection
     let playerSelection = choice;
     // Variable for computer's rsndomly selection
