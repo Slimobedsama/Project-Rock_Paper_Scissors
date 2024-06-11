@@ -46,3 +46,17 @@ h1, .com h3, .player h3 {
     border-radius: 5px;
     cursor: pointer;
 }
+.start {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0;
+}
+.start input {
+    background-color: #fff;
+    color: #000;
+    font-size: 1.0em;
+    font-weight: 600;
+    padding: 5px 15px;
+    border-radius: 18px;
+    letter-spacing: 0.1em;
+}
