@@ -7,6 +7,9 @@ let playScissors = document.querySelector('[value="SCISSORS"]');
 let playerScore = document.querySelector('#player-score');
 let playerOutcome = document.querySelector('#player-outcome');
 let finalOutcome = document.querySelector('#final');
+
+// GAME COUNT
+let gameRound = 5;
 // SCORES
 playerScore.textContent = 'Player Score: ' + +0;
 computerScore.textContent = 'Computer Score: ' + +0;
@@ -79,10 +82,11 @@ function finalWinner() {
 };
 
 function game() {
-    for(let i = 1; i <= 5; i++) {
-       console.log(playRound());
+    if(gameRound <= 1) {
+        finalOutcome.textContent = finalWinner();
     }
-    alert(finalWinner());
+    --gameRound;
+    console.log(gameRound)
 };
 
 // game()
@@ -90,14 +94,17 @@ function game() {
 playRock.addEventListener('click', ()=> {
     choice = playRock.value;
     playRound();
+    game();
 });
 
 playPaper.addEventListener('click', ()=> {
     choice = playPaper.value;
     playRound();
+    game();
 });
 
 playScissors.addEventListener('click', ()=> {
     choice = playScissors.value;
     playRound();
+    game();
 });
