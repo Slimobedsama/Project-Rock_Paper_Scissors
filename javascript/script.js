@@ -7,6 +7,7 @@ let playScissors = document.querySelector('[value="SCISSORS"]');
 let playerScore = document.querySelector('#player-score');
 let playerOutcome = document.querySelector('#player-outcome');
 let finalOutcome = document.querySelector('#final');
+let play = document.querySelector('[value="Play"]');
 
 // GAME COUNT
 let gameRound = 5;
@@ -86,7 +87,6 @@ function game() {
         finalOutcome.textContent = finalWinner();
     }
     --gameRound;
-    console.log(gameRound)
 };
 
 // game()
@@ -108,3 +108,5 @@ playScissors.addEventListener('click', ()=> {
     playRound();
     game();
 });
+
+play.addEventListener('click', ()=> {});
