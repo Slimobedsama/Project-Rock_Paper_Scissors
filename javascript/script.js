@@ -85,6 +85,10 @@ function finalWinner() {
 function game() {
     if(gameRound <= 1) {
         finalOutcome.textContent = finalWinner();
+        playRock.disabled = true;
+        playPaper.disabled = true;
+        playScissors.disabled = true;
+        play.style.display = 'block';
     }
     --gameRound;
 };
