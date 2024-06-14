@@ -7,7 +7,7 @@ let playScissors = document.querySelector('[value="SCISSORS"]');
 let playerScore = document.querySelector('#player-score');
 let playerOutcome = document.querySelector('#player-outcome');
 let finalOutcome = document.querySelector('#final');
-let play = document.querySelector('[value="Play"]');
+let playButton = document.querySelector('[value="Play"]');
 
 // GAME COUNT
 let gameRound = 5;
@@ -43,11 +43,11 @@ function playRound() {
         if(playerSelection === 'ROCK') {
         // Congratulates player if rock
             playerScore+= 1;
-            playerOutcome.textContent = 'Player Wins! Rock beats Scissors';
+            playerOutcome.textContent = 'Player Wins! Rock Beats Scissors';
         } else {
         // Congratulates computer if rock
             computerScore+= 1;
-            computerOutcome.textContent = 'You Lose! Rock beats Scissors';
+            computerOutcome.textContent = 'Computer Wins! Rock Beats Scissors';
         }
     // Checks player selection and computer selection for paper or rock
     } else if (playerSelection === 'PAPER' && computerSelection === 'ROCK' || playerSelection === 'ROCK' && computerSelection === 'PAPER') {
@@ -55,19 +55,19 @@ function playRound() {
         if(playerSelection === 'PAPER') {
         // Congratulates player if paper
             playerScore+= 1;
-            playerOutcome.textContent = 'Player Wins! Paper beats Rock';
+            playerOutcome.textContent = 'Player Wins! Paper Beats Rock';
         } else {
         // Congratulates  computer if paper
             computerScore+= 1;
-            computerOutcome.textContent = 'You Lose! Paper beats Rock';
+            computerOutcome.textContent = 'Computer Wins! Paper Beats Rock';
         }
     } else if (playerSelection === 'SCISSORS' && computerSelection === 'PAPER' || playerSelection === 'PAPER' && computerSelection === 'SCISSORS') {
         if(playerSelection === 'SCISSORS') {
             playerScore+= 1;
-            playerOutcome.textContent = 'Player Wins! Scissors beats Paper';
+            playerOutcome.textContent = 'Player Wins! Scissors Beats Paper';
         } else {
             computerScore+= 1;
-            computerOutcome.textContent = 'You Lose! Scissors beats Paper';
+            computerOutcome.textContent = 'Computer Wins! Scissors Beats Paper';
         }
     }
 };
@@ -88,12 +88,11 @@ function game() {
         playRock.disabled = true;
         playPaper.disabled = true;
         playScissors.disabled = true;
-        play.style.display = 'block';
+        playButton.style.display = 'block';
     }
     --gameRound;
 };
 
-// game()
 // EVENT LISTENERS
 playRock.addEventListener('click', ()=> {
     choice = playRock.value;
@@ -113,4 +112,13 @@ playScissors.addEventListener('click', ()=> {
     game();
 });
 
-play.addEventListener('click', ()=> {});
+playButton.addEventListener('click', ()=> {
+    gameRound = 5;
+    finalOutcome.textContent = '';
+    playerOutcome.textContent = '';
+    computerOutcome.textContent = '';
+    playRock.disabled = false;
+    playPaper.disabled = false;
+    playScissors.disabled = false;
+    playButton.style.display = 'none';
+});
