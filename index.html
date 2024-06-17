@@ -5,9 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <h3>This a game of ROCK, PAPER, SCISSORS. The game is played for five(5) rounds, and at the of the game, a winner is declared based on the score or a draw if the game ends with a tie score. To start, click on the play button.</h3>
+    <div class="start">
+        <input type="button" value="Play">
+    </div>
+    <section class="com">
+        <h3>Computer Selection</h3>
+        <div class="images">
+            <div class="pics"><img src="/images/rock.jpg" alt="rock"></div>
+            <div class="pics"><img src="/images/paper.png" alt="paper"></div>
+            <div class="pics"><img src="/images/scissors.png" alt="scissors"></div>
+        </div>
+        <div class="com-score">
+            <h4 id="com-score"> </h4>
+            <h4 id="com-outcome"> </h4>
+        </div>
+    </section>
+    <section id="final-winner">
+        <h3 id="final"></h3>
+    </section>
+    <section class="player">
+        <div class="player-score">
+            <h4 id="player-score"> </h4>
+            <h4 id="player-outcome"> </h4>
+        </div>
+        <div class="images">
+            <div class="pics">
+                <img src="/images/rock.jpg" alt="my-rock">
+                <div class="centre">
+                    <input type="button" value="ROCK">
+                </div>
+            </div>
+            <div class="pics">
+                <img src="/images/paper.png" alt="my-paper">
+                <div class="centre">
+                    <input type="button" value="PAPER">
+                </div>
+            </div>
+            <div class="pics">
+                <img src="/images/scissors.png" alt="my-scissors">
+                <div class="centre">
+                    <input type="button" value="SCISSORS">
+                </div>
+            </div>
+        </div>
+        <h3>Player Selection</h3>
+    </section>
     
-    <script src="./script.js"></script>
+    <script src="./javascript/script.js"></script>
 </body>
 </html>
