@@ -7,12 +7,12 @@ body, h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     padding: 0;
 }
-h2, .com h3, .player h3 {
+h3, .com h3, .player h3 {
     text-align: center;
     text-decoration: underline;
 }
 .com h3, .pics, #final-winner, .player h3 {
-    margin: 15px 10px;
+    margin: 10px;
 }
 .images {
     display: flex;
